@@ -68,7 +68,6 @@ body {
 
 .nav-buttons a:hover {
   color: #666;
-  transition: color 0.5s;
 }
 
 .hero {
