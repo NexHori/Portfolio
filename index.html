@@ -1,80 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Glenn Harris Embalzado | Full-Stack Developer</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Nex Embalzado | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Glenn Harris Embalzado</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#stack">Tech Stack</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h2>Hi, I'm Glenn</h2>
-    <p>A full-stack web developer passionate about building end-to-end solutions with clean code and creative design.</p>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="nav-buttons">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Hello, I'm Nex Embalzado</h1>
+    <p>Full-Stack Developer | Computer Engineer</p>
+    <a href="#projects"><button class="btn">More</button></a>
   </section>
 
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      I'm a full-stack developer with experience in front-end technologies like HTML, CSS, and JavaScript,
-      as well as back-end development using PHP and MySQL. I build responsive, dynamic applications
-      that are user-friendly and performance-driven.
-    </p>
-  </section>
-
+  <!-- Projects Section -->
   <section id="projects" class="section">
-    <h2>Projects</h2>
+    <h2>My Projects</h2>
     <div class="projects">
       <div class="project-card">
-        <h3>Inventory System</h3>
-        <p>
-          A full-stack PHP and JavaScript-based inventory management system. Features include user authentication,
-          role-based access, dynamic modals, and data logging.
-        </p>
+        <h3>Papilio Figure</h3>
+        <p>A web/database for figures built using Django, and React.</p>
+        <a href="https://github.com/NexHori/Papilio-Figure" target="_blank">View on GitHub</a>
       </div>
       <div class="project-card">
-        <h3>Landing Page</h3>
-        <p>
-          A clean and modern front-end landing page built with HTML, CSS, and minimal JavaScript,
-          designed for high conversion and fast loading.
-        </p>
+        <h3>Project Two</h3>
+        <p>A responsive portfolio website using modern design.</p>
+        <a href="https://yourportfolio.com/project2" target="_blank">View Project</a>
       </div>
       <div class="project-card">
-        <h3>REST API with PHP</h3>
-        <p>
-          Developed a secure RESTful API using vanilla PHP for managing user data,
-          integrated with a front-end dashboard using AJAX.
-        </p>
+        <h3>Project Three</h3>
+        <p>An inventory management system using PHP and MySQL.</p>
+        <a href="https://github.com/yourusername/project3" target="_blank">View on GitHub</a>
       </div>
     </div>
   </section>
 
-  <section id="stack" class="section">
-    <h2>Tech Stack</h2>
-    <ul class="stack-list">
-      <li><strong>Front-end:</strong> HTML, CSS, JavaScript, AJAX</li>
-      <li><strong>Back-end:</strong> PHP, MySQL, REST APIs</li>
-      <li><strong>Tools:</strong> Git, VS Code, XAMPP</li>
-    </ul>
+  <!-- Skills Section -->
+  <section id="skills" class="section">
   </section>
 
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email me at <a href="mailto:glnn.mblzd@gmail.com">glnn.mblzd@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/NexHori" target="_blank">github.com/NexHori</a></p>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email:<a href="mailto:nexhori@gmail.com">nexhori@gmail.com</a></p>
+    <p>
+      <a href="https://github.com/NexHori" target="_blank">GitHub</a> |
+      <a href="https://twitter.com/HoriLost" target="_blank">Twitter</a> |
+      <a href="https://www.facebook.com/nex.embalzado" target="_blank">Facebook</a>
+    </p>
   </section>
 
   <footer>
-    <p>&copy; <script>document.write(new Date().getFullYear())</script> <a href="#" target="_blank">Glenn Harris Embalzado</a></p>
+    &copy; 2025 <a href="#home">Nex Embalzado</a>. All rights reserved.
   </footer>
+
 </body>
 </html>
+
+<script>
+  const navbar = document.querySelector('.navbar');
+
+  function updateNavbarState() {
+    if (window.scrollY === 0) {
+      navbar.classList.remove('hidden');
+      navbar.classList.add('always-show');
+    } else {
+      navbar.classList.remove('always-show');
+
+      if (!navbar.matches(':hover')) {
+        navbar.classList.add('hidden');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', updateNavbarState);
+  navbar.addEventListener('mouseenter', () => navbar.classList.remove('hidden'));
+  navbar.addEventListener('mouseleave', updateNavbarState);
+
+  updateNavbarState();
+</script>
