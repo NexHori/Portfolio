@@ -163,8 +163,11 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.skills-card h3 {
+.skills-card svg {
   margin-top: 0;
+}
+
+.skills-card h3 {
 }
 
 .skills-card p {
